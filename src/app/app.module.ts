@@ -13,6 +13,7 @@ import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 
 import { ScrollPositionDirective } from './theme/directives/scrollPosition.directive';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ScrollPositionDirective } from './theme/directives/scrollPosition.direc
     RouterModule.forRoot(routes, { useHash: true }),
     Ng2SmartTableModule,
     PagesModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],

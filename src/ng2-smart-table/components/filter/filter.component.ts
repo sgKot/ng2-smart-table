@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, ComponentFactoryResolver, ViewContainerRef, OnInit } from '@angular/core';
 
 import { DataSource } from '../../lib/data-source/data-source';
 import { Column } from '../../lib/data-set/column';
@@ -27,6 +27,12 @@ import { Subscription } from 'rxjs/Subscription';
                         [column]="column"
                         (filter)="onFilter($event)">
       </completer-filter>
+      <date-filter *ngSwitchCase="'date'"
+                    [query]="query"
+                    [ngClass]="inputClass"
+                    [column]="column"
+                    (filter)="onFilter($event)">
+      </date-filter>
       <input-filter *ngSwitchDefault
                     [query]="query"
                     [ngClass]="inputClass"

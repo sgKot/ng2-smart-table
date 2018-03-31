@@ -27,6 +27,7 @@ import {
   BasicExampleButtonViewComponent,
   ButtonViewComponent,
 } from './custom-edit-view/basic-example-button-view.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const EXAMPLES_COMPONENTS = [
   AdvancedExampleFiltersComponent,
@@ -56,6 +57,7 @@ const EXAMPLES_COMPONENTS = [
     RouterModule.forChild(routes),
     Ng2SmartTableModule,
     SharedModule,
+    NgbModule,
   ],
   entryComponents: [
     CustomEditorComponent,
